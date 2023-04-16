@@ -11,11 +11,11 @@
     shell: "velero install --provider aws --plugins velero/velero-plugin-for-aws:v1.6.0 --bucket kube-backup-nagesh --backup-location-config region=us-east-1 --snapshot-location-config region=us-east-1 --secret-file /tmp/credentials-velero"
 
 
-  - name: Get a list of all pods from any namespace
-    kubernetes.core.k8s_info:
-      kind: Pod
-      namespace: velero
-    register: pod_list
+  # - name: Get a list of all pods from any namespace
+  #   kubernetes.core.k8s_info:
+  #     kind: Pod
+  #     namespace: velero
+  #   register: pod_list
 
 
   # - name: create k8s pod
